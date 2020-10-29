@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1 class="justify-content-center">Register for new account!</h1>
+    <div class="justify-content-center">
+        <form method="POST">
+            {{ user_form.hidden_tag() }}
+            <div class="form-group">
+                {{ user_form.name.label }}
+                {{ user_form.name(class = "form-control", placeholder = "Ex. Hulk") }}
+            </div>
+            <div class="form-group">
+                {{ user_form.phone.label }}
+                {{ user_form.phone(class = "form-control", placeholder = "Ex. 555-555-5555") }}
+            </div>
+            <div class="form-group">
+                {{ user_form.email.label }}
+                {{ user_form.email(class = "form-control", placeholder = "Ex. hulk@sheild.gov") }}
+            </div>
+            <div class="form-group">
+                {{ user_form.password.label }}
+                {{ user_form.password(class = "form-control", placeholder = "Type Password") }}
+            </div>
+            <div class="form-group">
+                {{ user_form.confirm_pass.label }}
+                {{ user_form.confirm_pass(class = "form-control", placeholder = "Re-type Password") }}
+            </div>
+            {{ user_form.submit(class = "btn btn-success")}}
+        </form>
+    </div>
+
+{% endblock content %}
