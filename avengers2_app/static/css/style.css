@@ -1,0 +1,17 @@
+body {
+    /* background-image: url('../images/weird_background.jpg'); */
+    background-color: rgb(58, 58, 68);
+    color: #d4cfcf
+}
+
+.blacker {
+    background-color: black;
+}
+
+h1, h3, h4, label {
+    color: #d4cfcf
+}
+
+form {
+    margin: 0 10em;
+}

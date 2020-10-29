@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="justify-content-center">Log-In</h1>
+    <div class="justify-content-center">
+        <form method="POST">
+            {{ login_form.hidden_tag() }}
+            <div class="form-group">
+                {{ login_form.email.label }}
+                {{ login_form.email(class = "form-control", placeholder = "Ex. hulk@shield.gov") }}
+            </div>
+            <div class="form-group">
+                {{ login_form.password.label }}
+                {{ login_form.password(class = "form-control", placeholder = "Enter Password") }}
+            </div>
+            {{ login_form.submit(class = "btn btn-success")}}
+        </form>
+    </div>
+{% endblock content %}
