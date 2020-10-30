@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1 class="justify-content-center">Enter your new phone number</h1>
+    <div class="justify-content-center">
+        <form method="POST">
+            {{ phone_form.hidden_tag() }}
+            <div class="form-group">
+                {{ phone_form.phone.label }}
+                {{ phone_form.phone(class = "form-control", placeholder = "Add new phone") }}
+            </div>
+            {{ phone_form.submit(class = "btn btn-success")}}
+        </form>
+    </div>
+{% endblock content %}
